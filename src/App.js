@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import InputControl from "./components/Input";
 import { FormProvider, useForm } from "react-hook-form";
 import { useState } from "react";
+import SubForm from "./SubForm";
 
 function App() {
   const [showForm2, setShowForm2] = useState(false);
@@ -28,6 +29,7 @@ function App() {
           </form>
         </FormProvider>
       )}
+      <SubForm />
     </div>
   );
 }
