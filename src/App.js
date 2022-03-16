@@ -9,6 +9,7 @@ import SubForm from "./SubForm";
 function App() {
   const [showForm2, setShowForm2] = useState(false);
   const formMethods = useForm();
+  console.log("🚀 ~ file: App.js ~ line 12 ~ App ~ formMethods", formMethods)
   const formMethods2 = useForm();
 
   return (
