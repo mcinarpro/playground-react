@@ -1,8 +1,7 @@
 import { useFormContext } from "react-hook-form";
 
 const InputControl = ({ name, ...props }) => {
-  const { register, control } = useFormContext();
-  console.log("🚀 ~ file: Input.js ~ line 5 ~ InputControl ~ control", control)
+  const { register } = useFormContext();
 
   return <input {...props} {...register(name)} />;
 };
