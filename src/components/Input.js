@@ -1,9 +1,25 @@
-import { useFormContext } from "react-hook-form";
+import { useController, useFormContext } from "react-hook-form";
 
 const InputControl = ({ name, ...props }) => {
-  const { register } = useFormContext();
+  const { control } = useFormContext();
 
-  return <input {...props} {...register(name)} />;
+  const {
+    field,
+    fieldState: { error },
+  } = useController({
+    name,
+    control,
+    rules: { required: "required" },
+    defaultValue: "",
+  });
+  console.log({error})
+
+  return (
+    <>
+      <input {...props} {...field} />
+      {error && <div>{error.message}</div>}
+    </>
+  );
 };
 
 export default InputControl;

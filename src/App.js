@@ -31,7 +31,7 @@ function App() {
 
       <FormProvider {...formMethods}>
         <form onSubmit={formMethods.handleSubmit((data) => console.log(data))}>
-          <InputControl type="text" name="username" placeholder="username" />
+          <InputControl type="text" name="username2" placeholder="username2" />
           <br />
           <ul>
             {fields.map((item, index) => {
