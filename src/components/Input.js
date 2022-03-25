@@ -12,7 +12,6 @@ const InputControl = ({ name, ...props }) => {
     rules: { required: "required" },
     defaultValue: "",
   });
-  console.log({error})
 
   return (
     <>
